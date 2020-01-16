@@ -5,7 +5,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 # Register your models here.
 from users.models import Profile
 from django.contrib.auth.models import User
-
+from posts.models import Post
 # admin.site.register(Profile) one way to register in admin
 
 
@@ -76,6 +76,8 @@ class UserAdmin(BaseUserAdmin):
         'is_active',
         'is_staff',
         )
+
+
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
 
