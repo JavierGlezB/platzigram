@@ -59,4 +59,5 @@ def list_views(request):
     #return HttpResponse(response, content_type='application/json')
 
 
-    return render(request, 'feed.html',  {'posts': posts}   )
+    return render(request, 'posts/feed.html',  {'posts': posts}   )
+
