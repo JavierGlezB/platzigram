@@ -1,5 +1,7 @@
 from django.shortcuts import render
 # from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
+
 from datetime import datetime
 import json
 
@@ -39,7 +41,7 @@ posts = [
 ]
 
 
-
+@login_required
 def list_views(request):
     """lisst existing posts"""
     # # return view
